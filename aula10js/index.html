@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Estrutura de Decisão</title>
+</head>
+<body>
+  <h1>Estrutura de Decisão com switch</h1>
+  <div id="saida">Saída</div>
+
+  <script>
+    let dia = new Date().getDay(); // Obtém o dia da semana (0-6)
+    let saida = document.getElementById('saida');
+   
+    let dataAtual = new Date();
+    let diah = dataAtual.getDate();
+    let mes = dataAtual.getMonth() + 1; // Adiciona 1 porque os meses começam em 0
+    let ano = dataAtual.getFullYear();
+    let hora = dataAtual.getHours()
+    let minuto = dataAtual.getMinutes()
+    let hoje = " Dia "+diah + "/" + mes + "/" + ano +" - "+hora+"h"+minuto;
+    dia=2;
+    switch (dia) {
+      case 0:
+        saida.innerHTML = 'Hoje é Domingo!';
+        break;
+      case 1:
+        saida.innerHTML = 'Hoje é Segunda-feira!';
+        break;
+      case 2:
+        saida.innerHTML = 'Hoje é Terça-feira!';
+        break;
+      case 3:
+        saida.innerHTML = 'Hoje é Quarta-feira!';
+        break;
+      case 4:
+        saida.innerHTML = 'Hoje é Quinta-feira!';
+        break;
+      case 5:
+        saida.innerHTML = 'Hoje é Sexta-feira!';
+         break;
+      case 6:
+        saida.innerHTML = 'Hoje é Sábado!';
+        break;
+      default:
+        saida.innerHTML = 'Erro no cálculo do dia!';
+    }
+    saida.innerHTML += hoje +" "+dataAtual.toLocaleTimeString();
+    /*
+
+    Hoje é Sexta-feira, Dia 18/10/2024 - 09h50
+    */
+  </script>
+</body>
+</html>
+
