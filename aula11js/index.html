@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>looping</title>
+</head>
+<body>
+    <h1>Looping</h1>
+    
+<div id="saida"></div>
+<select></select>
+
+<script>
+    let sel = document.querySelector("select");
+let saida = document.getElementById("saida");
+let i = 0;//valor inicial
+while (i < 5) { //condição
+    saida.innerHTML += "Número: " + i + "<br>";//0 1 2 3 4
+    i++; //  contador
+}
+saida.innerHTML+="<hr>";
+
+i = 13;//valor inicial
+while (i <= 16) { //condição
+    saida.innerHTML += "Número: " + i + "<br>";//13 14 15 16
+    i++; //  contador
+}
+saida.innerHTML+="<hr>";
+
+i = 4;//valor inicial
+while (i >= 1) { //condição
+    saida.innerHTML +=  i + " ";//4 3 2 1
+    i--; //  contador
+}
+saida.innerHTML+="<hr>";
+i = 0;//valor inicial
+while (i <= 10) { //condição
+    saida.innerHTML +=  i + " ";//0 2 4 6 8 10
+    //i++; //  i=i+1  // i+=1
+    i+=5;
+
+}
+saida.innerHTML+="<hr>";
+i = 20;
+do {
+    saida.innerHTML +=  i + " ";//20
+    i++;//21
+} while (i < 5);
+
+saida.innerHTML+="<hr>";
+i=20;
+while (i < 5) { //condição
+    saida.innerHTML +=  i + " ";//
+    i++;
+
+}
+saida.innerHTML+="<hr>";
+
+for(i=0;i<=4;i++){
+    saida.innerHTML +=  i + " ";//0 1 2 3 4
+}
+saida.innerHTML+="<hr>";
+saida.innerHTML+="<ul>";
+    for(i=10;i<=13;i++){
+        saida.innerHTML+="<li>Item "+i+"</li>";
+    }
+saida.innerHTML+="</ul>"; 
+for(i=10;i<=13;i++){
+        sel.innerHTML+="<option>Item "+i+"</option>";
+    }   
+/*
+<ul>
+* <li>Item 10</li>
+* Item 11
+* Item 12
+* Item 13
+</ul>
+*/
+
+/*
+1) Qual o valor inicial? 0
+2) Qual a condição? i<5
+3) Qual o contador? i++
+4) Quantas vezes o looping foi executado? 5
+5) Qual o valor que tornou a condição como falsa? 5
+
+
+13
+14
+15
+16
+
+1) 13
+2) i<=16 ou i<17
+3) i++
+4) 4
+5) 17
+
+4
+3
+2
+1
+
+0 2 4 6 8 10
+1) 0
+2) i<=10
+3) i+=2
+4) 6
+5) 12
+
+*/
+</script>
+
+
+    
+</body>
+</html>
