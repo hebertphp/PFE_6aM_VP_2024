@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media final</title>
+    <script>
+        alert(localStorage.getItem('nome'));
+        alert(localStorage.getItem('media'));
+        function calcular(){
+            // alert("Sextou");
+            let resultado=document.getElementById("resultado");
+            let nome=document.getElementById("nome").value;
+            let av1=document.getElementById("av1");
+            let av2=document.getElementById("av2");
+            let media=0;
+            media=parseFloat(av1.value)+parseFloat(av2.value);
+            media/=2;
+            localStorage.setItem('nome', nome);
+            localStorage.setItem('media', media);
+
+
+            /*
+            7.8
+            parseInt
+            parseFloat
+            Number
+
+            */
+
+            resultado.innerHTML="<br>nome: "+nome;
+            resultado.innerHTML+="<br>av1: "+av1.value;
+            resultado.innerHTML+="<br>av2: "+av2.value;
+            resultado.innerHTML+="<br>media: "+media;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Media final</h1>
+    <form>
+        Nome <input type="text" id="nome" name="nome"><br>
+        Av1 <input type="text" id="av1" name="av1"><br>
+        Av2 <input type="text" id="av2" name="av2"><br>
+        <button id="btn1" type="button" onclick="calcular()">Calcular</button>
+        <h3>Resultado</h3>         
+        <div id="resultado"></div>
+    </form>
+
+
+    <!-- 
+    Criar um formulário com os campos:<form>
+    Nome
+    AV1
+    AV2
+    Botão Calcular <button>
+    -->
+</body>
+</html>
